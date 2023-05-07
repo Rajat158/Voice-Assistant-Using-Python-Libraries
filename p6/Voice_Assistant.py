@@ -31,6 +31,10 @@ def take_command():
         command = listener.recognize_google(voice, language='en-in')  
         print(f"User said: {command}\n")
         command = command.lower()
+        #==================================================
+        #The name of the voice assistant is Janny.
+        #If you don't say its name then it does not work.
+        #==================================================
         if 'janny' in command:
             command = command.replace('janny', '')
     except Exception as e:
